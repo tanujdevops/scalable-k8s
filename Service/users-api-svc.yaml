@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: users-api-svc
+spec:
+  selector:
+    app: users-api
+  ports:
+  - name: users-api-port
+    port: 3500
+    targetPort: 8082

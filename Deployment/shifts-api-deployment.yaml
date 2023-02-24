@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shifts-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shifts-api
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+    type: RollingUpdate
+  revisionHistoryLimit: 5
+  template:
+    metadata:
+      labels:
+        app: shifts-api
+    spec:
+      containers:
+      - name: shifts-api
+        image: php:8.1.16
+        ports:
+        - containerPort: 8083
+        env:
+        - name: DB_HOST
+          value: "shifts-db"
