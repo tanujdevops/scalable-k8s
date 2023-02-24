@@ -1,8 +1,8 @@
-#DevOps Engineer Exercise Solution
+-DevOps Engineer Exercise Solution
 
 The exercise focuses on deploying two containers that run independent APIs to return data from their respective isolated databases. We need to scale these containers independently; based on CPU utilization and ensure they can handle rolling deployments and rollbacks. Additionally, we want to implement IAM controls to restrict developer access to run certain commands.
 
-###Solution Overview
+---Solution Overview
 I will deploy two Kubernetes deployments for each container, each with its own replica set. These deployments will have their own services to expose the pods within the Kubernetes cluster. We will use the Horizontal Pod Auto-scaler (HPA) to auto-scale the deployments based on CPU utilization, ensuring we can handle the load and provide a seamless user experience. Finally, we will restrict developer access using IAM controls.
 
 ###Step 1: Deployment and Service Setup
