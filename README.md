@@ -54,6 +54,7 @@ kubectl rollout undo deployment/users-api
 
 To restrict developer access to certain Kubernetes commands, we will implement IAM controls. I have used the Kubernetes RBAC (Role-Based Access Control) to create a role that only allows developers to deploy and roll back deployments.
 In RBAC, I have created roles and role bindings to control access to Kubernetes resources. I have created a custom role with permissions to deploy and rollback deployments and limit access to certain commands or actions by denying permissions for those actions.
+
 Here are the steps to set up RBAC:
 Apply the service account `dev-team`:
 ```bash
