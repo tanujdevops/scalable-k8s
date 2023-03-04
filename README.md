@@ -1,4 +1,4 @@
-# DevOps Engineer Exercise Solution
+# DevOps Engineer Take-Home Exercise: Scalable Kubernetes Deployment with Rolling Updates and IAM Controls
 
 The exercise focuses on deploying two containers that run independent APIs to return data from their respective isolated databases. We need to scale these containers independently; based on CPU utilization and ensure they can handle rolling deployments and rollbacks. Additionally, we want to implement IAM controls to restrict developer access to run certain commands.
 
